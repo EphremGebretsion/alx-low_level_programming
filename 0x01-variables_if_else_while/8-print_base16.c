@@ -3,7 +3,7 @@
  * main - start
  * display fom 1 to 9
  * then display from a to f
- * Retun: 0 at the end
+ * Return: 0 at the end
  */
 int main(void)
 {
