@@ -1,4 +1,5 @@
 	.file	"6-size.c"
+	.intel_syntax noprefix
 	.text
 	.section	.rodata
 .LC0:
@@ -20,38 +21,38 @@ main:
 .LFB0:
 	.cfi_startproc
 	endbr64
-	pushq	%rbp
+	push	rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
-	movq	%rsp, %rbp
+	mov	rbp, rsp
 	.cfi_def_cfa_register 6
-	movl	$1, %esi
-	leaq	.LC0(%rip), %rax
-	movq	%rax, %rdi
-	movl	$0, %eax
+	mov	esi, 1
+	lea	rax, .LC0[rip]
+	mov	rdi, rax
+	mov	eax, 0
 	call	printf@PLT
-	movl	$4, %esi
-	leaq	.LC1(%rip), %rax
-	movq	%rax, %rdi
-	movl	$0, %eax
+	mov	esi, 4
+	lea	rax, .LC1[rip]
+	mov	rdi, rax
+	mov	eax, 0
 	call	printf@PLT
-	movl	$8, %esi
-	leaq	.LC2(%rip), %rax
-	movq	%rax, %rdi
-	movl	$0, %eax
+	mov	esi, 8
+	lea	rax, .LC2[rip]
+	mov	rdi, rax
+	mov	eax, 0
 	call	printf@PLT
-	movl	$8, %esi
-	leaq	.LC3(%rip), %rax
-	movq	%rax, %rdi
-	movl	$0, %eax
+	mov	esi, 8
+	lea	rax, .LC3[rip]
+	mov	rdi, rax
+	mov	eax, 0
 	call	printf@PLT
-	movl	$4, %esi
-	leaq	.LC4(%rip), %rax
-	movq	%rax, %rdi
-	movl	$0, %eax
+	mov	esi, 4
+	lea	rax, .LC4[rip]
+	mov	rdi, rax
+	mov	eax, 0
 	call	printf@PLT
-	movl	$0, %eax
-	popq	%rbp
+	mov	eax, 0
+	pop	rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
