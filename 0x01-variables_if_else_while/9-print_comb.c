@@ -27,13 +27,6 @@ int main(void)
 		i++;
 	}
 	putchar(57);
-	c = 36;
-	t = 0;
-	while (t < 2)
-	{
-	putchar(c);
-	t++;
-	c = 10;
-	}
+	putchar('\n');
 	return (0);
 }
