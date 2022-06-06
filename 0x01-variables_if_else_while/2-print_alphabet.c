@@ -7,9 +7,10 @@
  */
 int main(void)
 {
-	char c ='a';
-	int i=0;
-	while (i<26)
+	char c = 'a';
+	int i = 0;
+
+	while (i < 26)
 	{
 		putchar(c);
 		c++;
