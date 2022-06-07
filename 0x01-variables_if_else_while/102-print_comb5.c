@@ -38,13 +38,16 @@ int main(void)
 						n = d;
 						t++;
 					}
-					t = 0;
-					n = 44;
-					while (t < 2)
+					if (a == 57 && b == 56 && c == 57 && d == 57)
 					{
-						putchar(n);
-						n = 32;
-						t++;
+						t = 0;
+						n = 44;
+						while (t < 2)
+						{
+							putchar(n);
+							n = 32;
+							t++;
+						}
 					}
 					d++;
 				}
