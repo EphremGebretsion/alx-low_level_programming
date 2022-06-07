@@ -19,7 +19,6 @@ int main(void)
 			d = b + 1;
 			while (c < 58)
 			{
-				d = 48;
 				while (d < 58)
 				{
 					t = 0;
