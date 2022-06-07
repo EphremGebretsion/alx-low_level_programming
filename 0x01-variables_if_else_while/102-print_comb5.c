@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * main - starting point
- * work the first two sets 
+ * work the first two sets
  * nest the second two sets in to the first one
  * Return: 0 at the end
  */
@@ -13,7 +13,7 @@ int main(void)
 
 	while (a < 58)
 	{
-		while(b < 58)
+		while (b < 58)
 		{
 			c = a;
 			d = b + 1;
@@ -23,7 +23,7 @@ int main(void)
 				{
 					t = 0;
 					n = a;
-					while(t < 2)
+					while (t < 2)
 					{
 						putchar(n);
 						t++;
