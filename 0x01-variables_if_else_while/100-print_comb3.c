@@ -9,13 +9,12 @@
  */
 int main(void)
 {
-	int i = 48;
+	int i =48;
 	int s, t, c, n;
 
 	while (i < 57)
 	{
 		s = i + 1;
-
 		while (s < 58)
 		{
 			t = 0;
