@@ -10,14 +10,22 @@ int main(void)
 	print_alphabet();
 	return (0);
 }
+/**
+ * print_alphabet -used to print using putchar
+ */
 void print_alphabet(void)
 {
 	char ch = 'a';
 
         while (ch <= 'z')
         {
-                putchar(ch);
+                _putchar(ch);
                 ch++;
         }
-        _putchar("\n");
+        _putchar('\n');
+}
+int _putchar(char c)
+{
+	putchar(c);
+	return (1);
 }

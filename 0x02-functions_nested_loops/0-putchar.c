@@ -19,6 +19,13 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
+/**
+ * _putchar - prints the acepted value
+ * @c :is for acepting the char value
+ *
+ * print
+ * Return: 1 after all that
+ */
 int _putchar(char c)
 {
 	putchar(c);
