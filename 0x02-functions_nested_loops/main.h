@@ -9,4 +9,5 @@ void _putchar(char s[])
 		i++;
 	}
 }
+void print_alphabet(void);
 #endif
