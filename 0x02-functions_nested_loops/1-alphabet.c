@@ -24,8 +24,3 @@ void print_alphabet(void)
         }
         _putchar('\n');
 }
-int _putchar(char c)
-{
-	putchar(c);
-	return (1);
-}
