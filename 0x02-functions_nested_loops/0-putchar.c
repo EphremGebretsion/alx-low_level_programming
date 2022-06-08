@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	puts("_putchat");
+	puts("_putchar");
 	return (0);
 }
