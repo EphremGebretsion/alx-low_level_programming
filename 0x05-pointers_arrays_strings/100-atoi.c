@@ -6,7 +6,34 @@
  */
 int _atoi(char *s)
 {
-	int i = atoi(s);
-
+	char y[]="----------------";
+	int l = strlen(s);
+	int i = 0;
+	int c = 0;
+	int ii = 0;
+	while(i < l )
+	{
+		if (s[i] == '-')
+		{
+			c++;
+		}
+		if (s[i] >= 48 && s[i] <= 57)
+		{
+			if (c % 2 == 1)
+			{
+				y[ii]= '-';
+				ii++;
+			}
+			while (s[i] >= 48 && s[i] <= 57 && i < l)
+			{
+				y[ii] = s[i];
+				ii++;
+				i++;
+			}
+			i = l+1;
+		}
+		i++;
+	}
+	int i = atoi(y);
 	return (i);
 }
