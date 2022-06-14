@@ -8,7 +8,8 @@
 int main(void)
 {
 	srand(time(NULL));
-	int nu = rand();
+	int nu;
+	nu = rand();
 	printf("%i",nu);
 	return (0);
 }
