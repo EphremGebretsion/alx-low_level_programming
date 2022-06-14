@@ -9,10 +9,15 @@ int _atoi(char *s)
 	int l = strlen(s);
 	int i = 0;
 	int c = 0;
-	int sum = 0;
-
+	int sum;
+	sum = atoi(s);
+	if(sum != 0)
+	{
+		return (sum);
+	}	
 	while (i < l)
 	{
+		sum = 0;
 		if (s[i] == '-')
 		{
 			c++;
