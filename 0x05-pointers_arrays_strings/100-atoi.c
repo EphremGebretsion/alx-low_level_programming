@@ -1,4 +1,5 @@
 #include<string.h>
+#include<stdlib.h>
 /**
  * _atoi - converts the string to int
  * @s: is used to accept the string
@@ -10,11 +11,12 @@ int _atoi(char *s)
 	int i = 0;
 	int c = 0;
 	int sum;
+
 	sum = atoi(s);
-	if(sum != 0)
+	if (sum != 0)
 	{
 		return (sum);
-	}	
+	}
 	while (i < l)
 	{
 		sum = 0;
