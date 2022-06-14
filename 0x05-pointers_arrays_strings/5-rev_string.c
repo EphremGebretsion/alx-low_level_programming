@@ -2,14 +2,21 @@
 #include "main.h"
 void rev_string(char *s)
 {
-	char r[] = s;
-	int l = strlen(s) - 1;
+	int l = strlen(s);
+	char r[l];
+	l--;
 	int i = 0;
 	
 	while (l >= 0)
 	{
-		s[i] = r[l];
+		r[i] = s [l];
 		i++;
 		l--;
+	}
+	i = 0;
+	while (i < strlen(s))
+	{
+		s[i] = r [i];
+		i++;
 	}
 }
