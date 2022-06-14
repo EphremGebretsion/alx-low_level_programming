@@ -1,4 +1,5 @@
 #include<stdlib.h>
+#include<string.h>
 /**
  * _atoi - converts the string to int
  * @s: is used to accept the string
