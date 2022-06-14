@@ -6,21 +6,16 @@
  */
 void rev_string(char *s)
 {
-	const int l = strlen(s);
-	char r[25];
-	int L = l - 1;
+	char swap;
+	int l = strlen(s) - 1;
 	int i = 0;
 
-	while (L >= 0)
+	while (i <= l)
 	{
-		r[i] = s[L];
+		swap = s[i];
+		s[i] = s[l];
+		s[l] = swap;
 		i++;
-		L--;
-	}
-	i = 0;
-	while (i < l)
-	{
-		s[i] = r[i];
-		i++;
+		l--;
 	}
 }
