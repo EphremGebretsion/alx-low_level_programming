@@ -12,6 +12,7 @@ int _atoi(char *s)
 	int i = 0;
 	int c = 0;
 	int ii = 0;
+	int in;
 	while(i < l )
 	{
 		if (s[i] == '-')
@@ -35,6 +36,6 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	int in = atoi(y);
+	in = atoi(y);
 	return (in);
 }
