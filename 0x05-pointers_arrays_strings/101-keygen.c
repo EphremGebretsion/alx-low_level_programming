@@ -1,11 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 /**
  * main - check for random number
  * Return: zero at the end
  */
 int main(void)
 {
-	printf("%i",rand());
+	srand(time(NULL));
+	int nu = rand();
+	printf("%i",nu);
 	return (0);
 }
