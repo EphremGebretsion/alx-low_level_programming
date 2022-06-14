@@ -35,6 +35,6 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	int i = atoi(y);
-	return (i);
+	int in = atoi(y);
+	return (in);
 }
