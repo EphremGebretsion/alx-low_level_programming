@@ -7,7 +7,7 @@
 void rev_string(char *s)
 {
 	const int l = strlen(s);
-	char r[l];
+	char r[25];
 	int L = l - 1;
 	int i = 0;
 
