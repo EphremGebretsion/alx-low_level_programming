@@ -7,13 +7,12 @@
  */
 int _atoi(char *s)
 {
-	char y[]="----------------------------------";
 	int l = strlen(s);
 	int i = 0;
 	int c = 0;
-	int ii = 0;
-	int in;
-	while(i < l )
+	int sum = 0;
+
+	while (i < l)
 	{
 		if (s[i] == '-')
 		{
@@ -21,21 +20,18 @@ int _atoi(char *s)
 		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			if (c % 2 == 1)
-			{
-				y[ii]= '-';
-				ii++;
-			}
 			while (s[i] >= 48 && s[i] <= 57 && i < l)
 			{
-				y[ii] = s[i];
-				ii++;
+				sum = (sum * 10) + (s[i] - 48);
 				i++;
 			}
-			i = l+1;
+			i = l;
 		}
 		i++;
 	}
-	in = atoi(y);
-	return (in);
+	if (c % 2 == 1)
+	{
+		sum = -sum;
+	}
+	return (sum);
 }
