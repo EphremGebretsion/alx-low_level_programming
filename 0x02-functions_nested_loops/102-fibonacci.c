@@ -5,7 +5,7 @@
  * @f: used to accept the number
  * Return: returns the calculated number
  */
-int fib(int f)
+long int fib(int f)
 {
 	int r;
 
@@ -27,7 +27,7 @@ int main(void)
 
 	while (i < 50)
 	{
-		printf("%i", fib(f));
+		printf("%li", fib(f));
 		if (i < 49)
 			printf(", ");
 		i++;
