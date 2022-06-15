@@ -43,25 +43,28 @@ void print_times_table(int n)
 {
 	int a = 0, m = 0, t;
 
-	while (a <= n)
+	if (n <= 15 && n >= 0)
 	{
-		m = 0;
-		while (m <= n)
+		while (a <= n)
 		{
-			t = m * a;
-			if (m > 0)
+			m = 0;
+			while (m <= n)
 			{
-				if (t < 10)
-					psp(3);
-				else if (t < 100)
-					psp(2);
-				else
-					psp(1);
+				t = m * a;
+				if (m > 0)
+				{
+					if (t < 10)
+						psp(3);
+					else if (t < 100)
+						psp(2);
+					else
+						psp(1);
+				}
+				pnum(t);
+				m++;
 			}
-			pnum(t);
-			m++;
+			_putchar('\n');
+			a++;
 		}
-		_putchar('\n');
-		a++;
 	}
 }
