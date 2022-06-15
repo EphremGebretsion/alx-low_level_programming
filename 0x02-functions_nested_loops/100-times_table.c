@@ -62,7 +62,12 @@ void print_times_table(int n)
 			pnum(t);
 			if (m < n)
 			{
-				psp(s);
+				if (t < 10)
+					psp(3);
+				else if (t < 100)
+					psp(2);
+				else
+					psp(1);
 			}
 			m++;
 		}
