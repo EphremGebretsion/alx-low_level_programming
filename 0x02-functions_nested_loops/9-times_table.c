@@ -33,12 +33,16 @@ void times_table(void)
 		while (m <= 9)
 		{
 			r = m * n;
-			pnum(r);
-			if (m != 9)
+			if (m != 0)
 			{
 				_putchar(',');
+				if (r < 10)
+				{
+					_putchar(' ');
+				}
 				_putchar(' ');
 			}
+			_pnum(r);
 			m++;
 		}
 		_putchar('\n');
