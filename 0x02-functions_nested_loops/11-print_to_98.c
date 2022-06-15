@@ -17,7 +17,8 @@ void pnum(int n)
 	{
 		pnum(n / 10);
 	}
-	_putchar(n % 10);
+	r = n % 10;
+	_putchar(r);
 }
 /**
  * print_to_98 - used to print from the number to 98
