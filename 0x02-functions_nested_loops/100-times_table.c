@@ -58,7 +58,7 @@ void print_times_table(int n)
 		m = 0;
 		while (m <= n)
 		{
-			t = m * n;
+			t = m * a;
 			pnum(t);
 			if (m < n)
 			{
