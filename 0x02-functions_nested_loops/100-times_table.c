@@ -41,26 +41,15 @@ void pnum(int n)
  */
 void print_times_table(int n)
 {
-	int a = 0, m = 0, s = 0, t;
+	int a = 0, m = 0, t;
 
-	t = n * n;
-	while (t >= 0)
-	{
-		t = t / 10;
-		s++;
-		if (t == 0)
-		{
-			t = -2;
-		}
-	}
 	while (a <= n)
 	{
 		m = 0;
 		while (m <= n)
 		{
 			t = m * a;
-			pnum(t);
-			if (m < n)
+			if (m > 0)
 			{
 				if (t < 10)
 					psp(3);
@@ -69,6 +58,7 @@ void print_times_table(int n)
 				else
 					psp(1);
 			}
+			pnum(t);
 			m++;
 		}
 		_putchar('\n');
