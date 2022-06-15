@@ -65,8 +65,8 @@ void print_times_table(int n)
 				psp(s);
 			}
 			m++;
-			_putchar('\n');
 		}
+		_putchar('\n');
 		a++;
 	}
 }
