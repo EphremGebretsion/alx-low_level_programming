@@ -7,15 +7,19 @@
  */
 long int fib(int f)
 {
-	int r;
 
 	if (f == 0)
-		r = 0;
+	{
+		return (0);
+	}
 	else if (f == 1)
-		r = 1;
+	{
+		return (1);
+	}
 	else
-		r = fib(f - 2) + fib(f - 1);
-	return (r);
+	{
+	return (fib(f - 1) + fib(f - 2));
+	}
 }
 /**
  * main - used to print the fibonachi
@@ -23,15 +27,15 @@ long int fib(int f)
  */
 int main(void)
 {
-	int i = 0, f = 2;
+	int i = 0, n = 2;
 
 	while (i < 50)
 	{
-		printf("%li", fib(f));
+		printf("%li", fib(n));
 		if (i < 49)
 			printf(", ");
 		i++;
-		f++;
+		n++;
 	}
 	printf("\n");
 	return (0);
