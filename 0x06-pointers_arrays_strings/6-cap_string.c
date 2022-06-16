@@ -15,13 +15,13 @@ char *cap_string(char *s)
 	while (i < l)
 	{
 		if (i == 0)
-			s[i] = s[i];
+			s[i] = toupper(s[i]);
 		else
 		{
 			c = s[i - 1];
 			if (c == ' ' || c == '\n' || c == ',' || c == ';' || c == '.'
 					|| c == '!' || c == '?' || c == '"' || c == '('
-					|| c == ')' || c == '{' || c == '}')
+					|| c == ')' || c == '{' || c == '}' || c == '\t')
 			{
 				s[i] = toupper(s[i]);
 			}
