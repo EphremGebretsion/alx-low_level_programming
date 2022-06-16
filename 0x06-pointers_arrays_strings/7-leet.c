@@ -36,7 +36,7 @@ char *leet(char *s)
 	l = strlen(s);
 	while (i < l)
 	{
-		s[i] = check('A', 'b', s[i], '4');
+		s[i] = check('A', 'a', s[i], '4');
 		s[i] = check('E', 'e', s[i], '3');
 		s[i] = check('O', 'o', s[i], '0');
 		s[i] = check('T', 't', s[i], '7');
