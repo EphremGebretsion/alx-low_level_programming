@@ -15,7 +15,7 @@ char *cap_string(char *s)
 	while (i < l)
 	{
 		if (i == 0)
-			s[i] = toupper(s[i]);
+			s[i] = s[i];
 		else
 		{
 			c = s[i - 1];
