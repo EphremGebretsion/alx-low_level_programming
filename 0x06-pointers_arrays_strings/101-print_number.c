@@ -7,8 +7,14 @@
  */
 void print_number(int n)
 {
-	int nn = n / 10, r;
+	int nn, r;
 
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	nn = n / 10;
 	if (nn > 0)
 	{
 		print_number(nn);
