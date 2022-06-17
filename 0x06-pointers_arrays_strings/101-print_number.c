@@ -7,11 +7,12 @@
  */
 void print_number(int n)
 {
-	int nn = n / 10;
+	int nn = n / 10, r;
 
-	if (nn > 9)
+	if (nn > 0)
 	{
 		print_number(nn);
 	}
-	_putchar(n % 10);
+	r = n % 10;
+	_putchar(r + 48);
 }
