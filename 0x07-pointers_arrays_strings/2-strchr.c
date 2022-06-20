@@ -11,6 +11,10 @@ char *_strchr(char *s, char c)
 	int i = 0, l;
 
 	l = strlen(s);
+	if (c == '\0')
+	{
+		return (&s[l]);
+	}
 	while (i < l)
 	{
 		if (s[i] == c)
