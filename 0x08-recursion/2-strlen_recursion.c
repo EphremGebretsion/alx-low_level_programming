@@ -12,9 +12,7 @@ int check(char *s, int n)
 		check(s, n + 1);
 	}
 	else
-	{
 		return (n);
-	}
 }
 
 /**
