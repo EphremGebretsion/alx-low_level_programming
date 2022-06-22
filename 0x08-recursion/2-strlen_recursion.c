@@ -7,12 +7,13 @@
  */
 int check(char *s, int n)
 {
+	int len = n;
+
 	if (s[n] != '\0')
 	{
-		check(s, n + 1);
+		len = check(s, n + 1);
 	}
-	else
-		return (n);
+	return (len);
 }
 
 /**
@@ -22,7 +23,8 @@ int check(char *s, int n)
  */
 int _strlen_recursion(char *s)
 {
-	int l = check(s, 0);
+	int l;
 
+	l = check(s, 0);
 	return (l);
 }
