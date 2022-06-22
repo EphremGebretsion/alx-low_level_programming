@@ -10,9 +10,13 @@ int tes(int x, int t)
 	int r;
 
 	r = x / t;
-	if (n == 1)
+	if (x == 1)
 	{
 		return (1);
+	}
+	if (x < 0)
+	{
+		return (-1);
 	}
 	if (r == t)
 	{
