@@ -1,4 +1,3 @@
-#include<string.h>
 #include "main.h"
 /**
  * check - check to find the terminating string
@@ -8,12 +7,14 @@
  */
 int check(char *s, int n)
 {
-	if (s[n] == '\0')
+	if (s[n] != '\0')
+	{
+		check(s, n + 1);
+	}
+	else
 	{
 		return (n);
 	}
-	else
-		check(s, n + 1);
 }
 
 /**
