@@ -15,7 +15,7 @@ int check(char *s, int i, int l)
 	{
 		if (s[i] != s[l])
 		{
-			res = 0;
+			return (0);
 		}
 		res = check(s, ++i, --l);
 	}
