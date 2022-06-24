@@ -36,17 +36,17 @@ int main(int argc, char *argv[])
 		a = atoi(argv[i]);
 		if (check(argv[i]))
 		{
-			printf("Eroor\n");
+			printf("Error\n");
 			return (1);
 		}
 		if (a < 0)
 		{
-			printf("Eroor\n");
+			printf("Error\n");
 			return (1);
 		}
 		sum += a;
 		i++;
 	}
-	printf("%i\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
