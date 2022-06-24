@@ -1,4 +1,4 @@
-#include<stdio>
+#include<stdio.h>
 /**
  * main - prints the program name
  * @argc: is used to count the arguments
