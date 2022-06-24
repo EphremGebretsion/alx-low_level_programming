@@ -14,6 +14,11 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		a = atoi(argv[i]);
+		if (a < 0)
+		{
+			printf("Eroor\n");
+			return (1);
+		}
 		if (a == 0)
 		{
 			printf("Error\n");
