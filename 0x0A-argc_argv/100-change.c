@@ -45,6 +45,11 @@ int main(int argc, char *argv[])
 	if (argc == 2)
 	{
 		change = atoi(argv[1]);
+		if (change < 0)
+		{
+			printf("0");
+			return (0);
+		}
 		printf("%d\n", min(change));
 		return (0);
 	}
