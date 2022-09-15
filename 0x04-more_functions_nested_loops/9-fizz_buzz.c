@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "main.h"
 /**
- *fizz_buzz - prints fizz buzz
+ * fizz_buzz - prints fizz buzz
  */
 void fizz_buzz(void)
 {
@@ -16,11 +16,11 @@ void fizz_buzz(void)
 		{
 			printf("FizzBuzz");
 		}
-		if (t == 0)
+		else if (t == 0)
 		{
 			printf("Fizz");
 		}
-		if (f == 0)
+		else if (f == 0)
 		{
 			printf("Buzz");
 		}
@@ -38,4 +38,14 @@ void fizz_buzz(void)
 		}
 		i++;
 	}
+}
+/**
+ * main - excutes the program
+ * Return: always return 0
+ */
+int main(void)
+{
+	fizz_buzz();
+
+	return (0);
 }
