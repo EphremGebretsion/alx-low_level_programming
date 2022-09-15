@@ -32,6 +32,10 @@ void fizz_buzz(void)
 		{
 			printf(" ");
 		}
+		else
+		{
+			printf("\n");
+		}
 		i++;
 	}
 }
