@@ -14,7 +14,7 @@ void fizz_buzz(void)
 		f = i % 5;
 		if ((t == 0) && (f == 0))
 		{
-			printf("Fizz Buzz");
+			printf("FizzBuzz");
 		}
 		else if (t == 0)
 		{
