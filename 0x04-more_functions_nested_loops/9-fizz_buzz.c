@@ -16,11 +16,11 @@ void fizz_buzz(void)
 		{
 			printf("FizzBuzz");
 		}
-		else if (t == 0)
+		if (t == 0)
 		{
 			printf("Fizz");
 		}
-		else if (f == 0)
+		if (f == 0)
 		{
 			printf("Buzz");
 		}
