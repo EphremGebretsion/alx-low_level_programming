@@ -1,6 +1,11 @@
-#include "variadic_functions.h"
 #include <stdarg.h>
+#include "variadic_functions.h"
 
+/**
+ * sum_them_all - returns the sum of argumets
+ * @n: number of arguments
+ * Return: returns the result
+ */
 int sum_them_all(const unsigned int n, ...)
 {
 	int i, sum = 0;
