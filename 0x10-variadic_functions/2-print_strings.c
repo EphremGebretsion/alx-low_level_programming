@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
+
 /**
  * print_strings - prints the strings separated by the separator
  * @separator: separats the strings
  * @n: the number of strings
  */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
@@ -22,8 +24,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", tem);
 			if (separator != NULL && (i < (n - 1)))
 				printf("%s", separator);
-			else
-				printf("nil");
 		}
 	va_end(ars);
 	printf("\n");
