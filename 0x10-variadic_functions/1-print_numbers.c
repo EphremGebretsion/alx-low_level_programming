@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include "variadic_function.h"
+#include "variadic_functions.h"
 
 /**
  *print_numbers - print the numbers with the separetor in between
