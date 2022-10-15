@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdargs.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 /**
  * print_strings - prints the strings separated by the separator
@@ -11,7 +11,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list ars;
 
-	va_start(ars, n)
+	va_start(ars, n);
 		for (i = 0; i < n; i++)
 		{
 			printf("%s", va_arg(ars, char *));
