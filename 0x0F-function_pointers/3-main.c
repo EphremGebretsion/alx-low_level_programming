@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 	ope = argv[2];
@@ -25,14 +25,14 @@ int main(int argc, char *argv[])
 	l = ope[1];
 	if ((c != '+' && c != '-' && c != '*' && c != '/' && c != '%') || l != '\0')
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(99);
 	}
 	f = atoi(argv[1]);
 	s = atoi(argv[3]);
 	if ((c == '/' || c == '%') && (s == 0))
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(100);
 	}
 	calculator = get_op_func(ope);
