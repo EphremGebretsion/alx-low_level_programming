@@ -56,7 +56,7 @@ void print_all(const char * const format, ...)
 	};
 	va_list l;
 	int i;
-	long unsigned int j;
+	unsigned long int j;
 	char *sp = "";
 	char c;
 
