@@ -49,10 +49,11 @@ void print_str(va_list *v, char *sp)
 void print_all(const char * const format, ...)
 {
 	printer pr[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_str}
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_str},
+		{NULL, NULL}
 	};
 	va_list l;
 	int i;
@@ -68,7 +69,7 @@ void print_all(const char * const format, ...)
 		i = 0;
 		while (i < 4)
 		{
-			if (c == pr[i].c)
+			if (c == pr[i].c[0])
 			{
 				pr[i].f(&l, sp);
 				sp = ", ";
