@@ -6,9 +6,9 @@
  * @head: the head of the linked list
  * Return: nothing
  */
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
-	listint_t *t = head;
+	listint_t *t = *head;
 	listint_t *temp;
 
 	while (t != NULL)
@@ -17,5 +17,5 @@ void free_listint2(listint_t *head)
 		t = t->next;
 		free(temp);
 	}
-	head = NULL;
+	*head = NULL;
 }
