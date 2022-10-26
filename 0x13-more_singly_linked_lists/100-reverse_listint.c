@@ -26,14 +26,13 @@ listint_t *add_nodebeg(listint_t **head, const int n)
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *t = NULL;
 	listint_t *temp = *head;
+	*head = NULL;
 
 	while (temp != NULL)
 	{
-		add_nodebeg(&t, temp->n);
+		add_nodebeg(head, temp->n);
 		temp = temp->next;
 	}
-	*head = t;
-	return (t);
+	return (*head);
 }
