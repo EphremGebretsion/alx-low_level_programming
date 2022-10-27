@@ -8,7 +8,8 @@
  */
 unsigned long int po(unsigned long int b, unsigned int p)
 {
-	unsigned long int i = 0, res = 1;
+	unsigned long int res = 1;
+	int i = 0;
 
 	if (p == 0)
 		return (1);
