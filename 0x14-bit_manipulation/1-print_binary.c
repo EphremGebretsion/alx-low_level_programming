@@ -6,7 +6,7 @@
  * @p: the power number
  * Return: the result of b to the power p
  */
-unsigned int po(unsigned int b, unsigned int p)
+unsigned long int po(unsigned long int b, unsigned int p)
 {
 	unsigned int i = 0, res = 1;
 
@@ -53,5 +53,4 @@ void print_binary(unsigned long int n)
 				_putchar('0');
 		}
 	}
-	_putchar('\n');
 }
