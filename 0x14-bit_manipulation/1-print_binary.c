@@ -24,9 +24,8 @@ unsigned long int po(int p)
 void print_binary(unsigned long int n)
 {
 	unsigned long int r = 1, m = n;
-	int i = -1, s;
-	
-	s = (8 * (sizeof(unsigned long int))) - 1;
+	int i = -1, s = (8 * (sizeof(unsigned long int))) - 1;
+
 	if (n == 0)
 	{
 		_putchar('0');
