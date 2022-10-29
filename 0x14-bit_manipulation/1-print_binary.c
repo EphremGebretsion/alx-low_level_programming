@@ -2,19 +2,18 @@
 
 /**
  * po - used to calculate the power of the number
- * @b: the base number
  * @p: the power number
- * Return: the result of b to the power p
+ * Return: the result of 2 to the power p
  */
-unsigned long int po(unsigned long int b, unsigned int p)
+unsigned long int po(int p)
 {
 	unsigned long int res = 1;
-	unsigned int i = 0;
+	int i = 0;
 
 	if (p == 0)
 		return (1);
 	for (; i < p; i++)
-		res = res * b;
+		res = res * 2;
 	return (res);
 }
 /**
@@ -35,16 +34,16 @@ void print_binary(unsigned long int n)
 	{
 		do {
 			i++;
-			r = po(2, i);
+			r = po(i);
 			if (r > n)
 			{
 				i--;
 				break;
 			}
-		} while (r != n);
+		} while (r != n && i != 32);
 		for (; i >= 0; i--)
 		{
-			r = po(2, i);
+			r = po(i);
 			if (r <= m)
 			{
 				_putchar('1');
