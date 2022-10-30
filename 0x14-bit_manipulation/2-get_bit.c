@@ -24,7 +24,7 @@ unsigned long int po(unsigned int p)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int s = 8 * sizeof(unsigned long int), r;
+	unsigned int s = 8 * sizeof(unsigned long int) - 1, r;
 	unsigned long int m = n;
 	int j, i = 0;
 
@@ -40,7 +40,7 @@ int get_bit(unsigned long int n, unsigned int index)
 			break;
 		}
 		i++;
-	} while (r != n && i != s);
+	} while (r != n && i != (int)s);
 	for (; i >= 0; i--)
 	{
 		j = 0;
@@ -52,7 +52,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		}
 		else
 			j = 0;
-		if (i == index)
+		if (i == (int)index)
 			return (j);
 	}
 	return (0);
