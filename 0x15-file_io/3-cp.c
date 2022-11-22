@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	my_file = open(argv[1], O_RDONLY);
 	if (my_file == -1)
 		print_err("Error: Can't read from file", argv[1], 0, 98);
-	new_file = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
+	new_file = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (new_file == -1)
 		print_err("Error: Can't write to", argv[2], 0, 99);
 	do {
