@@ -18,9 +18,9 @@ void print_err(char *err_message, char *str_info, int int_info, int ex)
 	if (str_info == NULL && int_info == 0)
 		dprintf(STDERR_FILENO, "%s\n", err_message);
 	else if (str_info == NULL)
-		dprintf(STDERR_FILENO, "%s %s\n", err_message, str_info);
-	else
 		dprintf(STDERR_FILENO, "%s %d\n", err_message, int_info);
+	else
+		dprintf(STDERR_FILENO, "%s %s\n", err_message, str_info);
 	exit(ex);
 }
 /**
