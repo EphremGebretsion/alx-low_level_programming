@@ -15,7 +15,11 @@ hash_node_t *create_new_node(const char *key, const char *value)
 	if (new_node == NULL)
 		return (NULL);
 	new_node->key = (char *)malloc((strlen(key) + 1) * sizeof(char));
+	if (new_node->key == NULL)
+		return (NULL);
 	new_node->value = (char *)malloc((strlen(value) + 1) * sizeof(char));
+	if (new_node->value == NULL)
+		return (NULL);
 	strcpy(new_node->key, key);
 	strcpy(new_node->value, value);
 	new_node->next = NULL;
@@ -35,7 +39,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL)
 		return (0);
-	if (key == NULL || strlen(key) == 0 || ht->size == 0)
+	if (key == NULL || strlen(key) == 0 || ht->size == 0 || value == NULL)
 		return (0);
 	idx = key_index((const unsigned char *)key, ht->size);
 
