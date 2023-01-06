@@ -46,8 +46,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	temp = ht->array[idx];
 	while (temp)
+	{
 		temp = temp->next;
-	temp = create_new_node(key, value);
+		if (temp != NULL)
+		{
+			temp = create_new_node(key, value);
+			break;
+		}
+	}
 	if (temp == NULL)
 		return (0);
 	return (1);
