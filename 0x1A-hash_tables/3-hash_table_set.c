@@ -47,14 +47,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	temp = ht->array[idx];
 	while (temp)
 	{
-		temp = temp->next;
-		if (temp != NULL)
+		if (temp->next == NULL)
 		{
-			temp = create_new_node(key, value);
+			temp->next = create_new_node(key, value);
 			break;
 		}
+		temp = temp->next;
 	}
-	if (temp == NULL)
+	if (temp->next == NULL)
 		return (0);
 	return (1);
 }
