@@ -1,7 +1,25 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 #include <string.h>
+#include <stdio.h>
+/**
+ * key_exist - checks if the given indx already exist in the hash node
+ * @hn: the hash node eing checked
+ * @key: the key being searched
+ * Return: returns the node if found else return NULL
+ */
+hash_node_t *key_exist(hash_node_t *hn, char *key)
+{
+	hash_node_t *temp = hn;
 
+	while (temp)
+	{
+		if (strcmp(temp->key, key) == 0)
+			return (temp);
+		temp = temp->next;
+	}
+	return (NULL);
+}
 /**
  * create_new_node - creates a new hash node
  * @key: the key value
@@ -48,6 +66,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[idx] = create_new_node(key, value);
 		if (ht->array[idx] == NULL)
 			return (0);
+		return (1);
+	}
+	temp = key_exist(ht->array[idx], (char *)key);
+	if (temp)
+	{
+		temp->value = (char *)value;
 		return (1);
 	}
 	temp = create_new_node(key, value);
