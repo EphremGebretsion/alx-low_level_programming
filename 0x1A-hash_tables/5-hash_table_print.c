@@ -29,12 +29,15 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i = 0, n = 0;
 
-	printf("{");
-	while (i < ht->size)
+	if (ht)
 	{
-		if (ht->array[i])
-			n = print_hash_node(ht->array[i], n);
-		i++;
+		printf("{");
+		while (i < ht->size)
+		{
+			if (ht->array[i])
+				n = print_hash_node(ht->array[i], n);
+			i++;
+		}
+		printf("}\n");
 	}
-	printf("}\n");
 }
