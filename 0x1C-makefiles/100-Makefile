@@ -4,8 +4,8 @@ OBJ = $(subst .c,.o,$(SRC))
 NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantc
-.PHONEY: all clean oclean fclean re
-all: $(OBJ) m.h
+.PHONY: all clean oclean fclean re
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
