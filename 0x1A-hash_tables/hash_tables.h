@@ -1,6 +1,7 @@
 #ifndef HASH_TABLES_H
 #define HASH_TABLES_H
 
+#include <stdlib.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -38,5 +39,7 @@ hash_node_t *create_new_node(const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 hash_node_t *key_exist(hash_node_t *hn, char *key);
 void hash_table_print(const hash_table_t *ht);
+void hash_node_delete(hash_node_t *hn);
+void hash_table_delete(hash_table_t *ht);
 
 #endif
